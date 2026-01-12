@@ -87,7 +87,7 @@ export default function ContactContent() {
 
                                 <div>
                                     <label className="block text-sm font-bold mb-2">件名</label>
-                                    <select name="subject" className="w-full bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded p-3 focus:outline-none focus:border-[var(--accent-primary)] transition-colors text-white">
+                                    <select name="subject" className="w-full bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded p-3 focus:outline-none focus:border-[var(--accent-primary)] transition-colors text-[var(--text-secondary)]">
                                         <option value="Business Inquiry">ビジネスに関するお問い合わせ</option>
                                         <option value="Collaboration">コラボレーションのご提案</option>
                                         <option value="Media/Press">メディア・取材について</option>

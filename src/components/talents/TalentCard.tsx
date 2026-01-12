@@ -27,6 +27,7 @@ export default function TalentCard({ name, role, imageColor, imagePath, links, i
             className="group relative overflow-hidden rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-primary)]"
         >
             {/* Image Section */}
+            {/* Image Section */}
             <div
                 className="w-full relative overflow-hidden"
                 style={{ backgroundColor: imageColor, height: '320px' }}
@@ -40,32 +41,34 @@ export default function TalentCard({ name, role, imageColor, imagePath, links, i
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-secondary)] via-transparent to-transparent opacity-90" />
-                <div className="absolute bottom-4 left-4 z-10">
-                    <h3 className="text-2xl font-bold text-white font-display uppercase tracking-wider group-hover:text-[var(--accent-primary)] transition-colors drop-shadow-lg">
-                        {name}
-                    </h3>
-                    <p className="text-sm text-white/90 drop-shadow-md">{role}</p>
-                </div>
             </div>
 
-            {/* Social Links */}
-            <div className="p-4 flex gap-4 justify-end bg-[var(--bg-secondary)] relative z-10">
-                {links.youtube && (
-                    <a href={links.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
-                        <Youtube size={20} />
-                    </a>
-                )}
-                {links.twitter && (
-                    <a href={links.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-                        <Twitter size={20} />
-                    </a>
-                )}
-                {links.instagram && (
-                    <a href={links.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition-colors">
-                        <Instagram size={20} />
-                    </a>
-                )}
+            {/* Content & Social Links */}
+            <div className="p-5 bg-[var(--bg-secondary)] relative z-10">
+                <div className="mb-4">
+                    <h3 className="text-2xl font-bold text-white font-display uppercase tracking-wider group-hover:text-[var(--accent-primary)] transition-colors">
+                        {name}
+                    </h3>
+                    <p className="text-sm text-[var(--text-secondary)]">{role}</p>
+                </div>
+
+                <div className="flex gap-4 justify-end border-t border-[var(--border-primary)] pt-4">
+                    {links.youtube && (
+                        <a href={links.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+                            <Youtube size={20} />
+                        </a>
+                    )}
+                    {links.twitter && (
+                        <a href={links.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+                            <Twitter size={20} />
+                        </a>
+                    )}
+                    {links.instagram && (
+                        <a href={links.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition-colors">
+                            <Instagram size={20} />
+                        </a>
+                    )}
+                </div>
             </div>
         </motion.div>
     );
