@@ -19,7 +19,7 @@ export default function NewsDetailContent({ item }: NewsDetailContentProps) {
                     transition={{ duration: 0.6 }}
                     className="max-w-3xl mx-auto"
                 >
-                    <Link href="/news" className="inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-white transition-colors mb-8 group">
+                    <Link href="/news" className="inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors mb-8 group">
                         <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
                         <span>BACK TO NEWS</span>
                     </Link>
@@ -32,7 +32,7 @@ export default function NewsDetailContent({ item }: NewsDetailContentProps) {
                             </span>
                         </div>
 
-                        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-white leading-tight">
+                        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-[var(--text-primary)] leading-tight">
                             {item.title}
                         </h1>
 
@@ -44,7 +44,7 @@ export default function NewsDetailContent({ item }: NewsDetailContentProps) {
                             <div className="mt-8 pt-8 border-t border-[var(--border-primary)] text-center">
                                 <Link
                                     href="/audition"
-                                    className="inline-block px-8 py-4 bg-white text-black font-bold tracking-widest hover:bg-[var(--accent-primary)] hover:text-white transition-all duration-300 rounded-full"
+                                    className="inline-block px-8 py-4 bg-transparent text-[var(--text-primary)] border-2 border-[var(--text-primary)] font-bold tracking-widest hover:bg-[var(--text-primary)] hover:text-white transition-all duration-300 rounded-full"
                                 >
                                     AUDITION PAGE
                                 </Link>

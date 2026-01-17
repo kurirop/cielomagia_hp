@@ -1,19 +1,20 @@
 :root {
   /* Colors */
-  --bg-primary: #050510;
-  --bg-secondary: #0f0f1a;
-  --bg-tertiary: #1a1a2e;
+  /* Colors - Light Theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --bg-tertiary: #e5e7eb;
 
   --accent-primary: #d946ef;
   --accent-secondary: #8b5cf6;
   --accent-glow: rgba(217, 70, 239, 0.4);
 
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --text-muted: #71717a;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
 
-  --border-primary: rgba(255, 255, 255, 0.1);
-  --border-hover: rgba(255, 255, 255, 0.2);
+  --border-primary: rgba(0, 0, 0, 0.1);
+  --border-hover: rgba(0, 0, 0, 0.2);
 
   /* Fonts */
   --font-main: var(--font-noto-sans-jp), sans-serif;
@@ -80,7 +81,7 @@ button {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #fff 0%, var(--accent-secondary) 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -522,4 +523,46 @@ button {
 
 .border-white\/20 {
   border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Custom overrides for Hero Button to guarantee visibility */
+.bg-slate-900 {
+  background-color: #0f172a !important;
+}
+
+.hover\:bg-slate-800:hover {
+  background-color: #1e293b !important;
+}
+
+.border-purple-500\/30 {
+  border-color: rgba(168, 85, 247, 0.3) !important;
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05) !important;
+}
+
+.text-lg {
+  font-size: 1.125rem !important;
+}
+
+.px-10 {
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+
+.py-5 {
+  padding-top: 1.25rem !important;
+  padding-bottom: 1.25rem !important;
+}
+
+/* Mobile Menu Overlay Override */
+.mobile-menu-overlay {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
 }

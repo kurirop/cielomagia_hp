@@ -46,7 +46,7 @@ export default function TalentCard({ name, role, imageColor, imagePath, links, i
             {/* Content & Social Links */}
             <div className="p-5 bg-[var(--bg-secondary)] relative z-10">
                 <div className="mb-4">
-                    <h3 className="text-2xl font-bold text-white font-display uppercase tracking-wider group-hover:text-[var(--accent-primary)] transition-colors">
+                    <h3 className="text-2xl font-bold text-[var(--text-primary)] font-display uppercase tracking-wider group-hover:text-[var(--accent-primary)] transition-colors">
                         {name}
                     </h3>
                     <p className="text-sm text-[var(--text-secondary)]">{role}</p>

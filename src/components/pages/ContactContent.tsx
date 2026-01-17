@@ -14,6 +14,7 @@ export default function ContactContent() {
 
         const formData = new FormData(e.currentTarget);
         const data = {
+            organization: formData.get('organization'),
             name: formData.get('name'),
             email: formData.get('email'),
             subject: formData.get('subject'),
@@ -76,6 +77,10 @@ export default function ContactContent() {
                             <form className="space-y-6" onSubmit={handleSubmit}>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
+                                        <label className="block text-sm font-bold mb-2">組織名または個人</label>
+                                        <input name="organization" required type="text" className="w-full bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded p-3 focus:outline-none focus:border-[var(--accent-primary)] transition-colors" placeholder="●●株式会社 or 個人" />
+                                    </div>
+                                    <div>
                                         <label className="block text-sm font-bold mb-2">お名前</label>
                                         <input name="name" required type="text" className="w-full bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded p-3 focus:outline-none focus:border-[var(--accent-primary)] transition-colors" placeholder="山田 太郎" />
                                     </div>
@@ -91,6 +96,7 @@ export default function ContactContent() {
                                         <option value="Business Inquiry">ビジネスに関するお問い合わせ</option>
                                         <option value="Collaboration">コラボレーションのご提案</option>
                                         <option value="Media/Press">メディア・取材について</option>
+                                        <option value="Audition">オーディションに関するお問い合わせ</option>
                                         <option value="Other">その他</option>
                                     </select>
                                 </div>

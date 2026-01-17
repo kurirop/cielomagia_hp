@@ -26,7 +26,7 @@ export default function CompanyContent() {
                                 クリエイター一人ひとりが星のように空で煌めく、その魔法を共に作り上げることが私たちの使命です。
                             </p>
                             <div className="text-right">
-                                <p className="font-bold text-[var(--accent-secondary)]">星野 ルナ</p>
+                                <p className="font-bold text-[var(--accent-secondary)]">中島 健人</p>
                                 <p className="text-sm text-[var(--text-muted)]">CEO / 代表取締役</p>
                             </div>
                         </div>
@@ -36,10 +36,10 @@ export default function CompanyContent() {
                                 {[
                                     { label: '会社名', value: '株式会社CieloMagia' },
                                     { label: '英語表記', value: 'CieloMagia Inc.' },
-                                    { label: '設立', value: '2024年1月' },
-                                    { label: '代表者', value: '星野 ルナ' },
-                                    { label: '所在地', value: '東京都渋谷区' },
-                                    { label: '事業内容', value: 'VTuberグループの運営・マネジメント、アパレルブランドの企画・販売' },
+                                    { label: '設立', value: '2026年3月' },
+                                    { label: '代表者', value: '中島 健人' },
+                                    { label: '所在地', value: '東京都東村山市秋津町5-12-89' },
+                                    { label: '事業内容', value: 'VTuberグループの運営・マネジメント、アパレルブランドの企画・販売、ECサイト運営' },
                                 ].map((item) => (
                                     <div key={item.label} className="py-4 grid grid-cols-1 md:grid-cols-3 gap-2">
                                         <dt className="text-[var(--text-muted)] font-medium">{item.label}</dt>

@@ -3,12 +3,12 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
     try {
-        const { name, email, subject, message } = await request.json();
+        const { name, email, subject, message, organization } = await request.json();
 
         // Validate input
-        if (!name || !email || !message) {
+        if (!name || !email || !organization || !message) {
             return NextResponse.json(
-                { error: 'Name, email, and message are required.' },
+                { error: 'Name, email, organization, and message are required.' },
                 { status: 400 }
             );
         }
@@ -30,6 +30,7 @@ export async function POST(request: Request) {
             to: process.env.CONTACT_EMAIL, // The email address where inquiries should be sent
             subject: `[CieloMagia Contact] ${subject || 'New Inquiry'}`,
             text: `
+Organization: ${organization}
 Name: ${name}
 Email: ${email}
 Subject: ${subject}
@@ -39,6 +40,7 @@ ${message}
       `,
             html: `
         <h3>New Contact Inquiry</h3>
+        <p><strong>Organization:</strong> ${organization}</p>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Subject:</strong> ${subject}</p>

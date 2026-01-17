@@ -20,7 +20,7 @@ export default function Hero() {
                         Apparel & VTuber Agency
                     </h2>
                     <h1 className="text-6xl md:text-8xl font-bold mb-6 font-display tracking-tight">
-                        <span className="block text-white">Cielo</span>
+                        <span className="block text-[var(--text-primary)]">Cielo</span>
                         <span className="block gradient-text">Magia</span>
                     </h1>
                     <p className="text-[var(--text-secondary)] text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -31,9 +31,9 @@ export default function Hero() {
 
                     <Link
                         href="/audition" // Assuming audition is under news or separate, sticking to /news for now or creating specific
-                        className="inline-block px-8 py-4 bg-white text-black font-bold tracking-widest hover:bg-[var(--accent-primary)] hover:text-white transition-all duration-300 rounded-full"
+                        className="inline-block px-10 py-5 bg-slate-900 text-white text-lg font-bold tracking-widest hover:bg-slate-800 hover:scale-105 transition-all duration-300 rounded-full shadow-2xl border-4 border-purple-500/30"
                     >
-                        JOIN AUDITION
+                        JOIN AUDITION ➤
                     </Link>
                 </motion.div>
             </div>
@@ -44,8 +44,8 @@ export default function Hero() {
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
             >
-                <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center">
-                    <div className="w-1 h-3 bg-white mt-2 rounded-full" />
+                <div className="w-6 h-10 border-2 border-[var(--text-muted)] rounded-full flex justify-center">
+                    <div className="w-1 h-3 bg-[var(--text-primary)] mt-2 rounded-full" />
                 </div>
             </motion.div>
         </section>

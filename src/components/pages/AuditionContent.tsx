@@ -28,7 +28,7 @@ export default function AuditionContent() {
                             <div className="space-y-6">
                                 {requirements.map((item, index) => (
                                     <div key={index} className="border-b border-[var(--border-primary)] pb-4 last:border-0 last:pb-0">
-                                        <h3 className="font-bold text-white mb-2">{item.label}</h3>
+                                        <h3 className="font-bold text-[var(--text-primary)] mb-2">{item.label}</h3>
                                         <p className="text-[var(--text-secondary)] leading-relaxed">{item.value}</p>
                                     </div>
                                 ))}
@@ -49,6 +49,36 @@ export default function AuditionContent() {
                                     </div>
                                 ))}
                             </div>
+                        </div>
+
+                        {/* Application Form */}
+                        <div className="bg-[var(--bg-secondary)] p-8 rounded-2xl border border-[var(--border-primary)]" id="application-form">
+                            <h2 className="text-2xl font-bold mb-6 text-[var(--accent-secondary)] text-center">Audition Application Form</h2>
+                            <p className="mb-8 text-center text-[var(--text-secondary)]">
+                                次世代VTuberオーディションへの応募は以下のフォームからお願いします。
+                            </p>
+
+                            <form className="space-y-6">
+                                <div>
+                                    <label className="block text-sm font-bold mb-2">お名前 / 活動名</label>
+                                    <input type="text" className="w-full bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded p-3 focus:outline-none focus:border-[var(--accent-primary)] transition-colors" placeholder="山田 太郎" />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold mb-2">メールアドレス</label>
+                                    <input type="email" className="w-full bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded p-3 focus:outline-none focus:border-[var(--accent-primary)] transition-colors" placeholder="your@email.com" />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold mb-2">配信経験・ポートフォリオURL</label>
+                                    <input type="url" className="w-full bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded p-3 focus:outline-none focus:border-[var(--accent-primary)] transition-colors" placeholder="https://" />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-bold mb-2">自己紹介・志望動機</label>
+                                    <textarea className="w-full bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded p-3 h-32 focus:outline-none focus:border-[var(--accent-primary)] transition-colors" placeholder="あなたの想いを聞かせてください..." />
+                                </div>
+                                <button type="submit" className="w-full py-4 bg-gradient-to-r from-[var(--accent-secondary)] to-[var(--accent-primary)] text-white font-bold tracking-widest rounded-lg hover:opacity-90 transition-opacity">
+                                    APPLY NOW
+                                </button>
+                            </form>
                         </div>
 
                         {/* Contact for Audition */}
