@@ -6,9 +6,9 @@ export async function POST(request: Request) {
         const { name, email, subject, message, organization } = await request.json();
 
         // Validate input
-        if (!name || !email || !organization || !message) {
+        if (!name || !email || !message) {
             return NextResponse.json(
-                { error: 'Name, email, organization, and message are required.' },
+                { error: 'Name, email, and message are required.' },
                 { status: 400 }
             );
         }
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
             to: process.env.CONTACT_EMAIL, // The email address where inquiries should be sent
             subject: `[CieloMagia Contact] ${subject || 'New Inquiry'}`,
             text: `
-Organization: ${organization}
+Organization: ${organization || 'N/A (Audition/Individual)'}
 Name: ${name}
 Email: ${email}
 Subject: ${subject}
@@ -40,7 +40,7 @@ ${message}
       `,
             html: `
         <h3>New Contact Inquiry</h3>
-        <p><strong>Organization:</strong> ${organization}</p>
+        <p><strong>Organization:</strong> ${organization || 'N/A (Audition/Individual)'}</p>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Subject:</strong> ${subject}</p>

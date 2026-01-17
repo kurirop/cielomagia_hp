@@ -566,3 +566,9 @@ button {
   backdrop-filter: blur(24px) !important;
   -webkit-backdrop-filter: blur(24px) !important;
 }
+
+/* Button Hover Override */
+.btn-outline-hover:hover {
+  background-color: var(--text-primary) !important;
+  color: #ffffff !important;
+}
