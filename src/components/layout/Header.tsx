@@ -66,7 +66,8 @@ export default function Header() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: '100%' }}
                             transition={{ type: 'tween', duration: 0.3 }}
-                            className="fixed inset-0 mobile-menu-overlay z-40 flex flex-col items-center justify-center gap-8 md:hidden"
+                            className="fixed inset-0 w-screen h-screen mobile-menu-overlay z-40 flex flex-col items-center justify-center gap-8 md:hidden"
+                            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
                         >
                             {navItems.map((item) => (
                                 <Link
