@@ -1,37 +1,7 @@
 'use client';
 
 import TalentCard from '@/components/talents/TalentCard';
-
-const talents = [
-    {
-        name: 'Aria Sky',
-        role: 'Virtual Singer',
-        imageColor: '#3b82f6',
-        imagePath: '/images/talents/aria.png',
-        links: { twitter: '#', youtube: '#' },
-    },
-    {
-        name: 'Kanon Rose',
-        role: 'Gaming Streamer',
-        imageColor: '#ec4899',
-        imagePath: '/images/talents/kanon.png',
-        links: { twitter: '#', youtube: '#', instagram: '#' },
-    },
-    {
-        name: 'Riu Dragon',
-        role: 'Variety Streamer',
-        imageColor: '#ef4444',
-        imagePath: '/images/talents/riu.png',
-        links: { twitter: '#', youtube: '#' },
-    },
-    {
-        name: 'Sui Aqua',
-        role: 'ASMR Artist',
-        imageColor: '#06b6d4',
-        imagePath: '/images/talents/sui.png',
-        links: { twitter: '#', youtube: '#' },
-    },
-];
+import { talents } from '@/data/talents';
 
 export default function TalentsContent() {
     return (

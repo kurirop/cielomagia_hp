@@ -572,3 +572,12 @@ button {
   background-color: var(--text-primary) !important;
   color: #ffffff !important;
 }
+
+/* Image Fit Overrides */
+.object-contain {
+  object-fit: contain !important;
+}
+
+.object-bottom {
+  object-position: bottom !important;
+}
