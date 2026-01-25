@@ -573,11 +573,17 @@ button {
   color: #ffffff !important;
 }
 
-/* Image Fit Overrides */
-.object-contain {
+/* News Card Override */
+.news-card {
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Force Object Fit for Images */
+img.object-contain {
   object-fit: contain !important;
 }
 
-.object-bottom {
-  object-position: bottom !important;
+img.object-cover {
+  object-fit: cover !important;
 }

@@ -5,6 +5,7 @@ export interface NewsItem {
   title: string;
   content: string;
   body?: string;
+  imagePath?: string;
 }
 
 export const newsItems: NewsItem[] = [
@@ -14,6 +15,7 @@ export const newsItems: NewsItem[] = [
     category: 'AUDITION',
     title: '第1期生VTuberオーディション開催！',
     content: '新しい物語を共に紡ぐ、輝く個性を募集しています。',
+    imagePath: '/images/audition_banner.png',
     body: `
       CieloMagiaでは、第1期生となるVTuberオーディションを開催いたします。
       
@@ -35,6 +37,7 @@ export const newsItems: NewsItem[] = [
     category: 'INFO',
     title: '公式サイトをリニューアルしました',
     content: '株式会社CieloMagiaの最新情報をお届けする公式サイトを公開しました。',
+    imagePath: '/images/website_renewal_banner.png',
     body: `
       株式会社CieloMagiaの公式サイトをリニューアルいたしました。
       

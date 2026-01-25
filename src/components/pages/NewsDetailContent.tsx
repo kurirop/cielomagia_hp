@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronLeft } from 'lucide-react';
 import { NewsItem } from '@/data/news';
 
@@ -35,6 +36,16 @@ export default function NewsDetailContent({ item }: NewsDetailContentProps) {
                         <h1 className="text-3xl md:text-4xl font-bold mb-8 text-[var(--text-primary)] leading-tight">
                             {item.title}
                         </h1>
+
+                        {item.imagePath && (
+                            <div className="relative w-full mb-10 rounded-xl overflow-hidden shadow-lg bg-gray-50" style={{ aspectRatio: '3/2' }}>
+                                <img
+                                    src={item.imagePath}
+                                    alt={item.title}
+                                    className="w-full h-full object-contain object-center"
+                                />
+                            </div>
+                        )}
 
                         <div className="prose prose-invert max-w-none text-[var(--text-secondary)] leading-loose whitespace-pre-wrap mb-10">
                             {item.body || item.content}
