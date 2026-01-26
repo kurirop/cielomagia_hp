@@ -20,13 +20,11 @@ export default function Hero() {
                         Apparel & VTuber Agency
                     </h2>
                     <h1 className="text-6xl md:text-8xl font-bold mb-6 font-display tracking-tight">
-                        <span className="block text-[var(--text-primary)]">Cielo</span>
-                        <span className="block gradient-text">Magia</span>
+                        <span className="text-[var(--text-primary)]">Cielo</span>{' '}
+                        <span className="gradient-text">Magia</span>
                     </h1>
                     <p className="text-[var(--text-secondary)] text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                        バーチャルとリアルの境界を超え、
-                        <br />
-                        新しい時代の「輝き」を創造する。
+                        夢を現実に、技術を未来に
                     </p>
 
                     <Link
