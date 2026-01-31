@@ -80,6 +80,9 @@ export default function TalentDetailContent({ talent }: TalentDetailContentProps
                                     <span className="inline-block px-3 py-1 bg-[var(--accent-primary)] text-white text-xs font-bold rounded-full mb-4">
                                         {talent.role}
                                     </span>
+                                    <span className="block text-[var(--text-muted)] text-sm font-bold mb-1 tracking-wider uppercase">
+                                        {talent.furigana}
+                                    </span>
                                     <h1 className="text-4xl md:text-5xl font-bold mb-2 font-display uppercase tracking-wider text-[var(--text-primary)]">
                                         {talent.name}
                                     </h1>
@@ -98,20 +101,36 @@ export default function TalentDetailContent({ talent }: TalentDetailContentProps
                                                 <span className="font-bold text-[var(--text-primary)]"> {talent.profile.birthday}</span>
                                             </div>
                                             <div>
+                                                <span className="block text-[var(--text-muted)] text-xs mb-1">DEBUT DATE</span>
+                                                <span className="font-bold text-[var(--text-primary)]"> {talent.profile.debutDate}</span>
+                                            </div>
+                                            <div>
                                                 <span className="block text-[var(--text-muted)] text-xs mb-1">HEIGHT</span>
                                                 <span className="font-bold text-[var(--text-primary)]"> {talent.profile.height}</span>
                                             </div>
+                                            {talent.profile.mbti && (
+                                                <div>
+                                                    <span className="block text-[var(--text-muted)] text-xs mb-1">MBTI</span>
+                                                    <span className="font-bold text-[var(--text-primary)]"> {talent.profile.mbti}</span>
+                                                </div>
+                                            )}
                                             {talent.profile.fanName && (
-                                                <div className="col-span-2">
+                                                <div className="">
                                                     <span className="block text-[var(--text-muted)] text-xs mb-1">FAN NAME</span>
                                                     <span className="font-bold text-[var(--text-primary)]"> {talent.profile.fanName}</span>
+                                                </div>
+                                            )}
+                                            {talent.profile.fanMark && (
+                                                <div className="">
+                                                    <span className="block text-[var(--text-muted)] text-xs mb-1">FAN MARK</span>
+                                                    <span className="font-bold text-[var(--text-primary)]"> {talent.profile.fanMark}</span>
                                                 </div>
                                             )}
                                             <div className="col-span-2">
                                                 <span className="block text-[var(--text-muted)] text-xs mb-1">HOBBIES</span>
                                                 <div className="flex flex-wrap gap-2">
                                                     {talent.profile.hobbies.map((hobby, index) => (
-                                                        <span key={index} className="px-2 py-1 bg-[var(--bg-secondary)] rounded text-[var(--text-secondary)] text-xs">
+                                                        <span key={index} className="px-2 py-1 bg-[var(--bg-secondary)] rounded font-bold text-[var(--text-primary)] text-xs">
                                                             {hobby}
                                                         </span>
                                                     ))}

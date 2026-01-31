@@ -19,7 +19,7 @@ export default function Hero() {
                     <h2 className="text-[var(--accent-secondary)] tracking-[0.2em] font-medium mb-4 uppercase text-sm md:text-base">
                         Apparel & VTuber Agency
                     </h2>
-                    <h1 className="text-6xl md:text-8xl font-bold mb-6 font-display tracking-tight">
+                    <h1 className="text-6xl md:text-8xl font-bold mb-6 font-display tracking-tight pb-4 leading-tight">
                         <span className="text-[var(--text-primary)]">Cielo</span>{' '}
                         <span className="gradient-text">Magia</span>
                     </h1>

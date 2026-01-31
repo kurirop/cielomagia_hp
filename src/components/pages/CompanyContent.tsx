@@ -59,29 +59,12 @@ export default function CompanyContent() {
             <section className="py-32 md:py-40 bg-[var(--bg-secondary)] border-y border-[var(--border-primary)]">
                 <div className="container">
                     <SectionTitle subtitle="Message">代表挨拶</SectionTitle>
-                    <div className="grid md:grid-cols-12 gap-12 items-start">
-                        {/* Image Placeholder */}
-                        <motion.div
-                            {...fadeInUp}
-                            className="md:col-span-5 relative"
-                        >
-                            <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[var(--card-bg)] border border-[var(--border-primary)] relative shadow-2xl">
-                                {/* Placeholder for CEO Image */}
-                                <div className="absolute inset-0 flex items-center justify-center text-[var(--text-muted)]">
-                                    <span className="text-lg">CEO Portrait</span>
-                                </div>
-                                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                                    <p className="text-white font-bold text-xl">中島 健人</p>
-                                    <p className="text-white/80 text-sm">CEO / 代表取締役</p>
-                                </div>
-                            </div>
-                        </motion.div>
-
+                    <div className="max-w-4xl mx-auto">
                         {/* Content */}
                         <motion.div
                             {...fadeInUp}
                             transition={{ delay: 0.2, duration: 0.6 }}
-                            className="md:col-span-7 space-y-8"
+                            className="space-y-8"
                         >
                             <h3 className="text-2xl font-bold text-[var(--text-primary)]">
                                 新しい日常を創造し続ける
