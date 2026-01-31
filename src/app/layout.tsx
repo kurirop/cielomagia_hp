@@ -13,6 +13,9 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: 'CieloMagia',
   description: 'Apparel & VTuber Agency',
+  icons: {
+    icon: '/favicon.ico', // publicフォルダ直下にある場合
+  },
 }
 
 export default function RootLayout({
