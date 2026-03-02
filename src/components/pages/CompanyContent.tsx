@@ -26,7 +26,7 @@ export default function CompanyContent() {
     return (
         <div className="min-h-screen pt-[var(--header-height)]">
             {/* Hero Section */}
-            <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden bg-[var(--bg-secondary)] border-b border-[var(--border-primary)]">
+            <section className="relative h-[20vh] md:h-[25vh] flex items-center justify-center overflow-hidden bg-[var(--bg-secondary)] border-b border-[var(--border-primary)]">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[var(--bg-primary)] opacity-50" />
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -49,7 +49,7 @@ export default function CompanyContent() {
                         夢を現実に、<br className="md:hidden" />技術を未来に。
                     </h2>
                     <p className="text-lg md:text-xl text-[var(--text-secondary)] leading-relaxed">
-                        「CieloMagia」には、空（Cielo）のように無限に広がる可能性を、<br className="hidden md:block" />
+                        「CieloMagia」には、空（Cielo）のように無限に広がる可能性を、<br />
                         魔法（Magia）のように鮮やかな形に変えていきたいという想いを込めています。
                     </p>
                 </motion.div>
@@ -111,9 +111,9 @@ export default function CompanyContent() {
                                 { label: '会社名', value: '株式会社CieloMagia (CieloMagia Inc.)' },
                                 { label: '設立', value: '2026年3月' },
                                 { label: '代表者', value: '代表取締役 中島 健人' },
-                                { label: '資本金', value: '1,000万円' }, // Placeholder
+                                { label: '資本金', value: '400万円' },
                                 { label: '所在地', value: '〒189-0001\n東京都東村山市秋津町5-12-89' },
-                                { label: '事業内容', value: 'VTuberグループの運営・マネジメント\nアパレルブランドの企画・販売\nECサイト運営' },
+                                { label: '事業内容', value: 'バーチャルユーチューバー（Ｖｔｕｂｅｒ）のマネジメント、育成及びプロデュース業\n衣類、鞄、装身具、キャラクターグッズ等の企画、デザイン、製造及び販売\nデジタルコンテンツの企画、制作、配信、販売及び著作権等の管理' },
                             ].map((item, i) => (
                                 <div key={item.label} className="py-6 grid grid-cols-1 md:grid-cols-3 gap-2">
                                     <dt className="text-[var(--text-muted)] font-medium text-sm">{item.label}</dt>
