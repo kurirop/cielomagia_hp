@@ -140,6 +140,22 @@ button {
   gap: 3rem;
 }
 
+.gap-16 {
+  gap: 4rem;
+}
+
+.gap-24 {
+  gap: 6rem;
+}
+
+.gap-30 {
+  gap: 7.5rem;
+}
+
+.gap-32 {
+  gap: 8rem;
+}
+
 .grid {
   display: grid;
 }

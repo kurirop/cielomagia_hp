@@ -96,7 +96,7 @@ export default function CompanyContent() {
             </section>
 
             {/* Company Profile & History Wrapper */}
-            <div className="container py-32 md:py-40 grid md:grid-cols-2 gap-16 md:gap-24">
+            <div className="container py-32 md:py-40 grid md:grid-cols-1 gap-16 md:gap-24">
 
                 {/* Profile */}
                 <section>
@@ -135,7 +135,7 @@ export default function CompanyContent() {
                         <div className="relative border-l border-[var(--border-primary)] ml-3 pl-8 space-y-12 py-4">
                             {[
                                 { date: '2026.03', title: '株式会社CieloMagia 設立', desc: '東京都東村山市にて事業開始' },
-                                { date: '2026.04', title: 'VTuberプロジェクト始動', desc: '1期生オーディション開始' },
+                                // { date: '2026.04', title: 'VTuberプロジェクト始動', desc: '1期生オーディション開始' },
                             ].map((item, i) => (
                                 <div key={i} className="relative">
                                     <div className="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-[var(--accent-primary)] border-4 border-[var(--bg-primary)] shadow-sm" />
