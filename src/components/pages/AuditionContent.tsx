@@ -21,8 +21,8 @@ export default function AuditionContent() {
             message: `
 【応募内容】
 配信経験・ポートフォリオ: ${formData.get('portfolio')}
-自己紹介・志望動機:
-${formData.get('motivation')}
+自己紹介:
+${formData.get('self_introduction')}
             `.trim(),
         };
 
@@ -46,11 +46,6 @@ ${formData.get('motivation')}
         }
     };
 
-    const requirements = [
-        { label: '応募資格', value: '18歳以上の健康な方（高校生不可）。継続的に週3回以上の配信活動が可能な方。' },
-        { label: '求める人物像', value: '歌、ゲーム、トークなど、自分の得意分野で表現することが大好きな方。プロとして責任感を持って活動できる方。' },
-        { label: 'サポート体制', value: '専用Live2Dモデルの提供、作画・動画制作支援、配信機材の貸与相談、各種広報サポート、アパレル展開の優先権。' },
-    ];
 
     return (
         <div className="min-h-screen pt-[var(--header-height)]">
@@ -65,41 +60,11 @@ ${formData.get('motivation')}
                     </h1>
 
                     <div className="max-w-4xl mx-auto space-y-12">
-                        {/* Recruitment Details */}
-                        <div className="bg-[var(--bg-secondary)] p-8 rounded-2xl border border-[var(--border-primary)]">
-                            <h2 className="text-2xl font-bold mb-6 text-[var(--accent-secondary)]">募集要項</h2>
-                            <div className="space-y-6">
-                                {requirements.map((item, index) => (
-                                    <div key={index} className="border-b border-[var(--border-primary)] pb-4 last:border-0 last:pb-0">
-                                        <h3 className="font-bold text-[var(--text-primary)] mb-2">{item.label}</h3>
-                                        <p className="text-[var(--text-secondary)] leading-relaxed">{item.value}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Selection Flow */}
-                        <div className="bg-[var(--bg-secondary)] p-8 rounded-2xl border border-[var(--border-primary)]">
-                            <h2 className="text-2xl font-bold mb-6 text-[var(--accent-secondary)]">選考フロー</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-                                {['書類選考', '面談(1次)', '面談(2次)', 'デビュー'].map((step, i) => (
-                                    <div key={i} className="relative">
-                                        <div className="w-12 h-12 bg-[var(--accent-primary)] rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">
-                                            {i + 1}
-                                        </div>
-                                        <p className="font-bold">{step}</p>
-                                        {i < 3 && <div className="hidden md:block absolute top-6 left-[70%] w-full h-[2px] bg-[var(--border-primary)] -z-10" />}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-
                         {/* Application Form */}
                         <div className="bg-[var(--bg-secondary)] p-8 rounded-2xl border border-[var(--border-primary)]" id="application-form">
                             <h2 className="text-2xl font-bold mb-6 text-[var(--accent-secondary)] text-center">Audition Application Form</h2>
                             <p className="mb-8 text-center text-[var(--text-secondary)]">
-                                次世代VTuberオーディションへの応募は以下のフォームからお願いします。
+                                次世代VTuberになりたい方（サポートを受けたい方）は以下のフォームからお願いします。
                             </p>
 
                             {status === 'SUCCESS' ? (
@@ -128,8 +93,8 @@ ${formData.get('motivation')}
                                         <input name="portfolio" type="text" className="w-full bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded p-3 focus:outline-none focus:border-[var(--accent-primary)] transition-colors" placeholder="https://" />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-bold mb-2">自己紹介・志望動機</label>
-                                        <textarea name="motivation" required className="w-full bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded p-3 h-32 focus:outline-none focus:border-[var(--accent-primary)] transition-colors" placeholder="あなたの想いを聞かせてください..." />
+                                        <label className="block text-sm font-bold mb-2">自己紹介</label>
+                                        <textarea name="self_introduction" required className="w-full bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded p-3 h-32 focus:outline-none focus:border-[var(--accent-primary)] transition-colors" placeholder="あなたの想いを聞かせてください..." />
                                     </div>
 
                                     {status === 'ERROR' && (
@@ -141,7 +106,7 @@ ${formData.get('motivation')}
                                     <button
                                         type="submit"
                                         disabled={status === 'LOADING'}
-                                        className="btn-outline-hover w-full py-4 bg-transparent text-[var(--text-primary)] border-2 border-[var(--text-primary)] font-bold tracking-widest rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="w-full py-4 bg-transparent text-[var(--text-primary)] border-2 border-[var(--text-primary)] font-bold tracking-widest rounded transition-all duration-300 hover:bg-[var(--text-primary)] hover:text-white disabled:opacity-50 disabled:cursor-not-allowed uppercase"
                                     >
                                         {status === 'LOADING' ? 'SENDING...' : 'APPLY NOW'}
                                     </button>
@@ -150,14 +115,14 @@ ${formData.get('motivation')}
                         </div>
 
                         {/* Contact for Audition */}
-                        <div className="text-center bg-[var(--bg-primary)] p-8 rounded-2xl border border-[var(--accent-primary)] border-dashed">
+                        <div className="text-center bg-[var(--bg-primary)] p-12 rounded-2xl border border-[var(--accent-secondary)]">
                             <h2 className="text-xl font-bold mb-4">お問い合わせ先</h2>
-                            <p className="text-[var(--text-secondary)] mb-6">
+                            <p className="text-[var(--text-secondary)] mb-8">
                                 オーディションに関するご不明点は、お問い合わせフォームよりご連絡ください。
                             </p>
                             <Link
                                 href="/contact"
-                                className="btn-outline-hover inline-block px-8 py-3 bg-transparent text-[var(--text-primary)] border-2 border-[var(--text-primary)] font-bold tracking-widest rounded-full transition-all duration-300"
+                                className="inline-block px-12 py-3 bg-transparent text-[var(--text-primary)] border border-[var(--text-primary)] font-bold tracking-widest rounded-full transition-all duration-300 hover:bg-[var(--text-primary)] hover:text-white"
                             >
                                 CONTACT FORM
                             </Link>

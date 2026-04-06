@@ -12,13 +12,13 @@ const features = [
         href: '/company',
         color: 'var(--accent-secondary)',
     },
-    {
-        title: 'TALENTS',
-        description: 'Our Stars',
-        icon: Users,
-        href: '/talents',
-        color: 'var(--accent-primary)',
-    },
+    // {
+    //     title: 'TALENTS',
+    //     description: 'Our Stars',
+    //     icon: Users,
+    //     href: '/talents',
+    //     color: 'var(--accent-primary)',
+    // },
     {
         title: 'NEWS',
         description: 'Latest Updates',
